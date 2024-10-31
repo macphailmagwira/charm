@@ -1,0 +1,43 @@
+.dropdown {
+  @apply border shadow-lg bg-white dark:bg-gray-900 z-10 rounded-md;
+  @apply focus:outline-none z-30 overflow-y-auto;
+  background-color: var(--dropdown-bg-color);
+  border-color: var(--common-border-light-color);
+  max-height: 400px;
+}
+
+.dropdown.div-y > :not(:first-child) {
+  border-top: 1px solid var(--common-border-light-color);
+}
+
+.dropdown-content {
+  @apply cursor-pointer flex items-center px-4 py-2 text-sm;
+}
+
+.dropdown-content:hover {
+  background-color: var(--dropdown-bg-hover-color);
+}
+
+.dropdown-content:hover .dropdown-text {
+  color: var(--common-text-color); 
+}
+
+.dropdown-content:hover .dropdown-icon {
+  color: var(--common-text-color);
+}
+
+.dropdown-icon {
+  @apply mr-3 h-5 w-5;
+  color: var(--common-dark-text-color);
+}
+
+.dropdown-icon--active {
+  @apply dark:text-yellow-200;
+  @apply text-yellow-400;
+}
+
+.dropdown-text {
+  @apply mr-3;
+  color: var(--common-dark-text-color);
+}
+

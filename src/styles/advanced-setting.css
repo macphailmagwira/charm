@@ -1,0 +1,60 @@
+.advanced-setting-wrapper {
+  background-color: var(--setting-bg-color);
+}
+
+.setting-menu-item {
+  @apply rounded-md px-3 py-2 flex items-center text-sm font-medium;
+  @apply dark:hover:bg-gray-600 dark:hover:text-gray-400;
+  color: var(--common-text-color);
+} 
+
+.setting-menu-item.inactive{
+  color: var(--common-text-color);
+}
+
+.setting-menu-item.inactive:hover{
+  background-color: var(--common-dark-bg-color)
+}
+
+.setting-menu-item.active {
+  color: var(--common-primary-color);
+  background-color: var(--common-dark-bg-color);
+}
+
+.setting-menu-item .icon {
+  @apply flex-shrink-0 -ml-1 mr-3 h-6 w-6;
+  @apply text-gray-400 group-hover:text-gray-500;
+  color: var(--common-text-color);
+}
+
+.setting-menu-item.active .icon {
+  /* @apply text-yellow-500 group-hover:text-yellow-500; */
+  color: var(--common-primary-color);
+}
+
+.advanced-setting-card {
+  @apply py-6 px-4 space-y-6 sm:p-6;
+  background-color: var(--common-dark-bg-color);
+  color: var(--common-text-color);
+}
+
+.advanced-setting-card.no-space{
+  @apply space-y-0;
+}
+
+.card-bottom {
+  @apply px-4 py-3 text-right sm:px-6 border-t;
+  background-color: var(--common-dark-bg-color);
+  border-color: var(--common-border-light-color);
+}
+
+.title {
+  @apply text-lg leading-6 font-medium;
+  color: var(--common-text-color);
+}
+
+.paragraph {
+  @apply mt-1 text-sm;
+  color: var(--common-text-color);
+}
+

@@ -1,0 +1,160 @@
+.sidebar {
+  @apply border-r;
+  border-right-color: var(--common-border-color);
+}
+
+.root-sidebar {
+  @apply hidden sm:block;
+}
+
+.root-sidebar .side-section {
+  height: calc(100vh - 61px - 44px);
+  @apply overflow-y-auto;
+}
+
+.second-sidebar {
+  @apply w-64 hidden sm:block;
+  background-color: var(--sidebar2-background-color);
+}
+
+.is-web-app .second-sidebar.visible {
+  @apply block fixed top-0 left-0 w-full h-full z-30;
+}
+
+.second-sidebar-header{
+  @apply flex items-center gap-2 px-4 py-4 border-b;
+  @apply border-gray-200 dark:border-gray-900;
+  border-color: var(--common-border-color);
+}
+
+.is-web-app .second-sidebar-header .pad-search-wrapper {
+  @apply w-full;
+}
+
+.pad-search-btn[type="text"] {
+  @apply py-1 pl-7 block w-full text-sm cursor-pointer rounded-md;
+  @apply border-gray-300 hover:bg-gray-50 dark:bg-gray-900 dark:border-gray-800;
+  background-color: var(--common-dark-bg-color);
+  border-color: var(--common-border-color);
+}
+
+.pad-search-btn[type="text"]:hover{
+  background-color: var(--common-light-bg-color)
+}
+
+.root-sidebar{
+  @apply w-60 border-r;
+  background-color: var(--sidebar-background-color);
+  border-color: var(--common-border-color);
+}
+
+.root-sidebar .side-section {
+  @apply pb-3;
+}
+
+.root-sidebar .sec-title {
+  @apply px-4 py-3 text-sm font-medium ;
+  @apply flex items-center gap-2;
+  color: var(--sidebar-title-color);
+}
+
+.root-sidebar .sec-item {
+  @apply px-4 py-1;
+  @apply flex gap-2 items-center text-sm cursor-pointer ;
+  color: var(--sidebar-text-color);
+}
+
+.root-sidebar .sec-item:hover{
+  color: var(--sidebar-text-color-hover);
+}
+
+.root-sidebar .sec-container{
+  @apply mb-4
+}
+.root-sidebar .sec-container-no-list{
+  @apply mb-0
+}
+
+ 
+.root-sidebar .sec-content {
+  @apply ml-5;
+}
+
+.outline-title {
+  @apply py-3 text-sm font-bold;
+  color: var(--sidebar-title-color);
+}
+
+.outline-icon {
+  color: var(--sidebar-title-color);
+}
+
+.user-settings {
+  @apply px-4 py-3 ;
+  @apply flex items-center justify-between;
+  /*border-top-color: var(--sidebar-user-setting-border-color);*/
+}
+
+.outline-container {
+  @apply flex px-4 justify-between;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--common-border-color);
+}
+
+.outline-item-dropdown-icon {
+  @apply w-6 h-5 flex -mr-1 opacity-40 items-center justify-center cursor-pointer rounded;
+}
+
+.outline-item-dropdown-icon:hover{
+  opacity: 1;
+  background-color: var(--sidebar-background-color);
+}
+
+.usetting-fullname {
+  @apply text-xs font-medium;
+  color: var(--sidebar-title-color);
+}
+
+.usetting-email {
+  @apply text-xs font-light;
+  color: var(--sidebar-title-color);
+  font-size: 0.60rem; /* Making it smaller than text-xs (0.75rem) */
+}
+
+.app-version {
+  @apply text-xs font-medium flex items-center gap-1;
+  color: var(--sidebar-text-color);
+}
+
+.brand-name {
+  @apply py-3 text-sm font-bold;
+  color: var(--sidebar-title-color);
+}
+
+.outline-content {
+  @apply pl-5 block text-sm;
+  padding: 10px 0;
+}
+
+.outline-content:hover {
+  background-color: var(--dropdown-bg-hover-color);
+}
+
+.outline-btn:hover {
+  color: var(--sidebar-text-color-hover);
+}
+
+.outline-scroll {
+  height: calc(100vh - 61px - 44px);
+  @apply overflow-y-auto;
+}
+
+.active-outline {
+  background-color: var(--dropdown-bg-hover-color);
+}
+
+
+.close-outline {
+  color: var(--sidebar-text-color-hover);
+}
