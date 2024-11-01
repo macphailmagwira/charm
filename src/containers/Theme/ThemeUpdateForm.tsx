@@ -1,4 +1,3 @@
-import { emit } from "@tauri-apps/api/event"
 import { useEffect, useState } from "react"
 import Button from "../../components/Button"
 import ScrollBar from "../../components/ScrollBar"
@@ -34,9 +33,6 @@ export default function ThemeUpdateForm({
   const [updateCounter, setUpdateCounter] = useState(0)
   const { user } = useAuth()
 
-  const updateTheme = (cssVar: string) => {
-    emit("theme-preview", { cssVar })
-  }
 
   // NOTE: remember that, `updateUserTheme` function
   // only update theme's config inside `user-settings` collection.
@@ -55,7 +51,6 @@ export default function ThemeUpdateForm({
       })
       .then(() => {
         console.log("trigger update")
-        emit("theme-update")
       })
   }
 
@@ -100,7 +95,6 @@ export default function ThemeUpdateForm({
       })
       .then(() => {
         console.log("trigger update theme")
-        emit("theme-update")
       })
   }
 
@@ -169,7 +163,6 @@ export default function ThemeUpdateForm({
         const v = variables[i]
         cssVar.push(`${v.name}:${v.value}`)
       }
-      updateTheme(`:root{ ${cssVar.join(";")} }`)
     }
   }, [variables, updateCounter])
 

@@ -2,8 +2,9 @@ export const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(" ")
 }
 
+//TODO: continuing removing any references to tauri desktop
 export const isDesktopApp = () => {
-  return !!window.__TAURI_METADATA__
+  return false
 }
 
 export const guidGenerator = () => {
