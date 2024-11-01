@@ -1,5 +1,5 @@
 export const sendNotification = (message: string) => {
-  const url = process.env.REACT_APP_DISCORD_WEBHOOK || ''
+  const url = import.meta.env.VITE_DISCORD_WEBHOOK || ''
 
   if (!url) return
 

@@ -6,7 +6,6 @@ import { IPadStore, setPadStoreState } from "../../store"
 import { ISettingStore, setSettingState } from "../../store/settings"
 import { IThemeStore, setThemeStoreState } from "../../store/themes"
 import { IOutline, setIsOpen } from "../../store/outlines"
-import { appWindow, LogicalSize } from "@tauri-apps/api/window"
 import { message } from "../message"
 
 export interface KeyBoardProps {
@@ -129,12 +128,7 @@ export const shortCutAction = (
           const w = mainContent.offsetWidth
           const h = document.body.offsetHeight
 
-          // appWindow.size
-          if (!state.view.sidebar === false) {
-            appWindow.setSize(new LogicalSize(w, h))
-          } else {
-            appWindow.setSize(new LogicalSize(1360, h))
-          }
+         
 
           state.view.sidebar = !state.view.sidebar
         })
