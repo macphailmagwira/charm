@@ -1,40 +1,41 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
-import Layout from "../components/Layout"
-import LayoutClear from "../components/Layout/LayoutClear"
+import Layout from "./components/Layout"
+import LayoutClear from "./components/Layout/LayoutClear"
 // import LayoutSetting from "./components/Layout/LayoutSetting";
-import PrivateRoute from "../components/PrivateRoute"
-import CommandPalletesSetting from "../containers/AdvancedSettings/CommandPalletes"
-import FileManager from "../containers/AdvancedSettings/FileManager"
-import Privacy from "../containers/AdvancedSettings/Privacy"
+import PrivateRoute from "./components/PrivateRoute"
+import CommandPalletesSetting from "./containers/AdvancedSettings/CommandPalletes"
+import FileManager from "./containers/AdvancedSettings/FileManager"
+import Privacy from "./containers/AdvancedSettings/Privacy"
 // import Profile from "./containers/AdvancedSettings/Profile";
-import Checking from "../containers/Checking"
-import EmailVerification from "../containers/EmailVerification"
-import ForgotPassword from "../containers/ForgotPassword"
-import LockScreen from "../containers/LockScreen"
+import Checking from "./containers/Checking"
+import EmailVerification from "./containers/EmailVerification"
+import ForgotPassword from "./containers/ForgotPassword"
+import LockScreen from "./containers/LockScreen"
 // import NotFound from "./containers/NotFound";
-import Pad from "../containers/Pad"
-import PadContent from "../containers/Pads/PadContent"
-import PadEmpty from "../containers/Pads/PadEmpty"
-import Signin from "../containers/Signin"
-import Signout from "../containers/Signout"
-import Signup from "../containers/Signup"
-import ThemeColor from "../containers/Theme"
-import ThemeCustom from "../containers/Theme/ThemeCustom"
-import ThemeSetting from "../containers/Theme/ThemeSetting"
-import { isDesktopApp } from "../libs/utils"
-import { AuthenProvider } from "../providers/Authenticator"
+import Pad from "./containers/Pad"
+import PadContent from "./containers/Pads/PadContent"
+import PadEmpty from "./containers/Pads/PadEmpty"
+import Signin from "./containers/Signin"
+import Signout from "./containers/Signout"
+import Signup from "./containers/Signup"
+import ThemeColor from "./containers/Theme"
+import ThemeCustom from "./containers/Theme/ThemeCustom"
+import ThemeSetting from "./containers/Theme/ThemeSetting"
+import { isDesktopApp } from "./libs/utils"
+import { AuthenProvider } from "./providers/Authenticator"
 
 const lz = React.lazy
 
-const LayoutSetting = lz(() => import("../components/Layout/LayoutSetting"))
-const Profile = lz(() => import("../containers/AdvancedSettings/Profile"))
-const Password = lz(() => import("../containers/AdvancedSettings/Password"))
-const Plan = lz(() => import("../containers/AdvancedSettings/Plan"))
-const NotFound = lz(() => import("../containers/NotFound"))
+const LayoutSetting = lz(() => import("./components/Layout/LayoutSetting"))
+const Profile = lz(() => import("./containers/AdvancedSettings/Profile"))
+const Password = lz(() => import("./containers/AdvancedSettings/Password"))
+const Plan = lz(() => import("./containers/AdvancedSettings/Plan"))
+const NotFound = lz(() => import("./containers/NotFound"))
 
 function App() {
-  const isWebversion = !isDesktopApp()
+  const isWebversion = true;
+  console.log('main app is being run')
 
   return (
     <div className={`App ${isWebversion ? "is-web-app" : ""}`}>

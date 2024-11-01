@@ -1,8 +1,8 @@
 import algoliasearch, { SearchIndex } from "algoliasearch"
 import { IUserSearch } from "../containers/PadActions/PadShareModal/types"
 
-const appId = process.env.REACT_APP_ALGOLIA_APP_ID || ''
-const apiKey = process.env.REACT_APP_ALGOLIA_API_KEY || '' // only use this app on Desktop, if you public it on the browser, this api key is not secure
+const appId = import.meta.env.VITE_ALGOLIA_APP_ID || '';
+const apiKey = import.meta.env.VITE_ALGOLIA_API_KEY || ''; // only use this app on Desktop, if you public it on the browser, this api key is not secure
 
 const client = algoliasearch(appId, apiKey)
 const noteIndex = client.initIndex("kompad-notes")

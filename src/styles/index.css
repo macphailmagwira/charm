@@ -1,3 +1,22 @@
+@import url("./modal.css");
+@import url("./scrollbar.css");
+@import url("./form.css");
+@import url("./advanced-setting.css");
+@import url("./prosemirror.css");
+@import url("./tiptap.css");
+@import url("./button.css");
+@import url("./sign.css");
+@import url("./sidebar.css");
+@import url("./pad.css");
+@import url("./dropdown.css");
+@import url("./theme.css");
+@import url("./word-count.css");
+@import url("./mermaid.css");
+@import url("./command-palletes.css");
+@import url("./listbox.css");
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -135,21 +154,4 @@ body {
 ::selection {
   @apply bg-indigo-500 text-white;
 }
-
-@import url("./modal.css");
-@import url("./scrollbar.css");
-@import url("./form.css");
-@import url("./advanced-setting.css");
-@import url("./prosemirror.css");
-@import url("./tiptap.css");
-@import url("./button.css");
-@import url("./sign.css");
-@import url("./sidebar.css");
-@import url("./pad.css");
-@import url("./dropdown.css");
-@import url("./theme.css");
-@import url("./word-count.css");
-@import url("./mermaid.css");
-@import url("./command-palletes.css");
-@import url("./listbox.css");
 
